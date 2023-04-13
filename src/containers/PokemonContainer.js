@@ -8,14 +8,11 @@ const PokemonContainer = () => {
     }, [])
 
     const getPokemon = function () {
-        fetch('https://pokeapi.co/api/v2/pokemon?offset=100&limit=100')
+        fetch('https://pokeapi.co/api/v2/pokemon?offset=50&limit=50')
             .then(res => res.json())
             .then(pokemons => setPokemons(pokemons["results"]))
             .then(pokemons => console.log(pokemons["results"]))
     }
-
-   
-
 
     return (
         <>
