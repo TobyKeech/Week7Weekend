@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
-const Pokemon = ({pokemon}) => {
+const Pokemon = ({pokemon, onPokemonClicked}) => {
+    const handleClick = function () {
+        onPokemonClicked(pokemon)
+
+    }
     return ( 
         <>
-            <div>{pokemon["name"]}</div>
+            <li onClick={handleClick}>{pokemon["name"]}</li>
         </>
      );
 }
