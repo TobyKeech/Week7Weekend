@@ -1,11 +1,10 @@
-const Pokemon = ({pokemon, onPokemonClicked}) => {
-    const handleClick = function () {
-        onPokemonClicked(pokemon)
+const Pokemon = ({pokemon}) => {
+    
 
-    }
+    
     return ( 
         <>
-            <li onClick={handleClick}>{pokemon["name"]}</li>
+            <li>{pokemon["name"]}</li>
         </>
      );
 }

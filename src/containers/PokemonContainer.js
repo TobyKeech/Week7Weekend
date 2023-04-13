@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Pokeball from '../components/Pokeball';
 const PokemonContainer = () => {
     const [pokemons, setPokemons] = useState([]);
-    const [favPokemons, setFavPokemons] = useState(null); 
 
     useEffect(() => {
         getPokemon();
@@ -15,21 +14,14 @@ const PokemonContainer = () => {
             .then(pokemons => console.log(pokemons["results"]))
     }
 
-    const onPokemonClicked = function (pokemon) {
-        setClickedPokemon(pokemon)
-    }
-    const addToFaves = (pokemon) => {
-        setFavPokemons([...favePokemons, pokemon])
-        console.log(favPokemons);
-    };
+   
 
 
     return (
         <>
             <div>
                 <h1>Pokedex</h1>
-                <Pokeball pokemons={pokemons} onPokemonClicked={onPokemonClicked}/>
-                {clickedPokemon ? <Pokeball pokemon={clickedPokemon} addToFaves={addToFaves}/> : null}
+                <Pokeball pokemons={pokemons}/>
             </div>
         </>
     );

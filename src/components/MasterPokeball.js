@@ -1,9 +1,9 @@
 import React from "react";
 import Pokemon from "./Pokemon";
-const MasterPokeball = (favPokemons, onPokemonClicked) => {
+const MasterPokeball = (favPokemons) => {
 
     const favPokemonItems = favPokemons.map((pokemon,index) => {
-        <Pokemon pokemon={pokemon} key={index} onPokemonClicked={onPokemonClicked}/>
+        <Pokemon pokemon={pokemon} key={index}/>
     });
 
 
