@@ -1,16 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Pokemon from './Pokemon';
+import PokeDetails from './PokeDetails';
 const Pokeball = ({pokemons}) => {
-
-    const pokemonItem = pokemons.map((pokemon, index) => {
-        return <Pokemon pokemon={pokemon} index={index} />
+    const [pokeData, setPokeData] = useState(null);
+    const pokemonItem = pokemons.map((pokemon) => {
+        return <Pokemon pokemon={pokemon} setPokeData={setPokeData} />
     })
 
     return (
         <>
-        <ul>
+       
             {pokemonItem}
-        </ul>
+           {pokeData ? <PokeDetails pokeData={pokeData}/> : null}
         </>
       );
 }

@@ -1,20 +1,18 @@
-const Pokemon = ({pokemon, index}) => {
+const Pokemon = ({pokemon, setPokeData}) => {
     
-    const handleClick = (index) => {
-        fetch(`https://pokeapi.co/api/v2/pokemon/`)
+    const handleClick = () => {
+        fetch(`${pokemon.url}`)
         .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
+        .then(data => setPokeData(data))
     }
-
+    console.log(pokemon);
     return ( 
         <>
-        <ol>
+        <ul>
             <button type="button" onClick={() => 
-                handleClick(index)}>{pokemon.name}
+                handleClick()}>{pokemon.name}
             </button>
-            </ol>
+        </ul>
         </>
      );
 }
