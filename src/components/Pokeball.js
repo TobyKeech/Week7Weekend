@@ -9,9 +9,10 @@ const Pokeball = ({pokemons}) => {
 
     return (
         <>
-       
+            <div className='PokeList'>
             {pokemonItem}
            {pokeData ? <PokeDetails pokeData={pokeData}/> : null}
+           </div>
         </>
       );
 }

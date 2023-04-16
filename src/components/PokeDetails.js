@@ -3,15 +3,18 @@ const PokeDetails = ({pokeData}) => {
     return (  
         <>
         <div>
-       Name of  {pokeData.name} is this tall {pokeData.height} {pokeData.base_experience}
+       <b>Name of pokemon: {pokeData.name}</b>
         </div>
 
         <div>
-        {pokeData.height}
+        They are this tall {pokeData.height} cm
         </div>
 
         <div>
-        {pokeData.base_experience}
+       Base Experience begins at : {pokeData.base_experience}
+        </div>
+        <div>
+       They have the following moves: {pokeData["moves"] ["move"]}
         </div>
         </>
 

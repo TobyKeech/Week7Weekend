@@ -1,1 +1,42 @@
+ul {
+    border-color: red;
+   border-style: solid;
+   border-width: 5px;
+   margin: 75px;
+   width: fit-content;
+   padding: 2%;
+   margin: auto;
+}
 
+li{
+    display: flex;
+    justify-content: right;
+}
+
+button {
+    color: black;
+}
+h1{
+    color: red;
+    display: flex;
+    justify-content: center;
+}
+h2{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+
+.Pokelist {
+background-color: rgb(246, 234, 6);
+  display: flex;
+  flex-wrap: wrap;
+ flex-direction: column;
+ align-content: space-around;
+ border-style: solid;
+ border-width: 5px;
+ margin: 75px;
+ width: fit-content;
+ padding: 2%;
+ margin: auto;
+}

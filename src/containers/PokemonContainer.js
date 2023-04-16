@@ -11,15 +11,17 @@ const PokemonContainer = () => {
         fetch('https://pokeapi.co/api/v2/pokemon')
             .then(res => res.json())
             .then(pokemons => setPokemons(pokemons["results"]))
-            .then(pokemons => console.log(pokemons["results"])) 
+            .then(pokemons => console.log(pokemons["results"]))
     }
 
     return (
         <>
-            <div>
-                <h1>Pokedex</h1>
-                <Pokeball pokemons={pokemons}/>
+
+            <h2>Pokedex</h2>
+            <div className='Pokelist'>
+                <Pokeball pokemons={pokemons} />
             </div>
+
         </>
     );
 }
