@@ -16,7 +16,6 @@ const PokemonContainer = () => {
 
     return (
         <>
-
             <h2>Pokedex</h2>
             <div className='Pokelist'>
                 <Pokeball pokemons={pokemons} />
